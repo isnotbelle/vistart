@@ -61,17 +61,17 @@ const { data, isLoading, error } = useFetch('https://...')
   <div v-if="isLoading">
     Data is being loaded...
   </div>
+  <div v-else-if="error !== null || data === null">
+    {{ error }}
+  </div>
   <div v-else>
     {{ data }}
-  </div>
-  <div v-if="error !== null">
-    {{ error }}
   </div>
 </template>
 ```
 
 It returns the following refs:
 
-* `data`: The returned and parsed JSON data.
+* `data`: The returned and parsed JSON data or `null`.
 * `isLoading`: Whether the data is still loading.
 * `error`: The error that occured or `null`.

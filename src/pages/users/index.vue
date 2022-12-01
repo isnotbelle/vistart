@@ -3,13 +3,16 @@ import Title from '@/components/Title.vue'
 import { useFetch } from '@/composables/useFetch'
 
 const url = 'https://jsonplaceholder.typicode.com/users'
-const { data, isLoading } = useFetch(url)
+const { data, isLoading, error } = useFetch(url)
 </script>
 
 <template>
   <Title>Users</Title>
   <div>
     <div v-if="isLoading">Loading...</div>
+    <div v-else-if="error !== null || data === null">
+      There was an error loading the data.
+    </div>
     <div v-else class="user-container">
       <div v-for="user in data" :key="user.id" class="user">
         <router-link :to="`/users/${user.id}`" class="link">@{{ user.username }}</router-link>
