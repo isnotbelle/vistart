@@ -54,7 +54,7 @@ The `useFetch` composable can be used to easily fetch data.
 <script setup>
 import { useFetch } from '@/composables/useFetch'
 
-const { data, isLoading, isError, error } = useFetch('https://...')
+const { data, isLoading, error } = useFetch('https://...')
 </script>
 
 <template>
@@ -64,7 +64,7 @@ const { data, isLoading, isError, error } = useFetch('https://...')
   <div v-else>
     {{ data }}
   </div>
-  <div v-if="isError">
+  <div v-if="error !== null">
     {{ error }}
   </div>
 </template>
@@ -74,5 +74,4 @@ It returns the following refs:
 
 * `data`: The returned and parsed JSON data.
 * `isLoading`: Whether the data is still loading.
-* `isError`: Whether an error occured.
 * `error`: The error that occured or `null`.

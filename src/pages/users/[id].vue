@@ -10,7 +10,7 @@ const props = defineProps({
 const { id } = toRefs(props)
 const url = computed(() => `https://jsonplaceholder.typicode.com/users/${id.value}`)
 
-const { data, isLoading } = useFetch(url.value)
+const { data, isLoading } = useFetch(url)
 </script>
 
 <template>
