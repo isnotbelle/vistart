@@ -48,7 +48,7 @@ import Title from '@/components/Title.vue'
 
 ## `useFetch` composable
 
-The `useFetch` composable can be used to easily fetch data.
+The `useFetch` composable can be used to easily fetch data. It accepts both a static URL and a ref of a URL. When it detects that the URL is a dynamic ref, it will run immediately and track the URL. Whenever the URL ref changes, the date will be reset and fetched again.
 
 ```vue
 <script setup>
