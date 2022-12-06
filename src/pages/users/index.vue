@@ -1,7 +1,6 @@
 <script setup>
 import Title from '@/components/Title.vue'
 import { useFetch } from '@/composables/useFetch'
-
 const url = 'https://jsonplaceholder.typicode.com/users'
 const { data, isLoading, error } = useFetch(url)
 </script>
@@ -32,13 +31,11 @@ const { data, isLoading, error } = useFetch(url)
   flex-direction: column;
   gap: 15px;
 }
-
 .user {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
-
 .link {
   display: block;
   color: rgb(0, 0, 255);
@@ -46,7 +43,6 @@ const { data, isLoading, error } = useFetch(url)
   font-size: 1.1rem;
   padding-bottom: 10px;
 }
-
 .details {
   font-size: 1rem;
 }

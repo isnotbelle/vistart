@@ -1,8 +1,11 @@
 <script setup>
 import Title from '@/components/Title.vue'
+
+
 </script>
 
 <template>
-  <Title>Daily Timesheet</Title>
-  <div>This is where the time entries are.</div>
+  <Title>Monthly Overview</Title>
+  <div>This is the monthly overview.</div>
+
 </template>

@@ -2,12 +2,28 @@
 const links = [
   {
     path: '/',
-    label: 'Home',
+    label: 'Daily Timesheet',
   },
   {
     path: '/users',
     label: 'Users',
   },
+  {
+    path: '/admin',
+    label: 'Admin Dashboard',
+  },
+  {
+    path: '/month',
+    label: 'Monthly Timesheet',
+  },
+  {
+    path: '/year',
+    label: 'Yearly Timesheet',
+  },
+  {
+    path: '/logout',
+    label: 'Logout',
+  }
 ]
 </script>
 
